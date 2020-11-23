@@ -1,0 +1,274 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+}
+
+header {
+  background-color: #FFF;   
+  padding: 1em 0;
+}
+  #top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em; 
+  }
+    /* #logo {
+      max-width: 200px;
+    } */
+    #page-heading {
+      color: rgb(240, 45, 45);
+      /* margin-left: -40px; */
+    }
+      #top h1 {
+        margin: 0;
+        font-family: 'Playfair Display', serif;
+        text-transform: uppercase;
+        font-size: 8.3vw;
+        /* font-weight: 100; */
+      }
+      #top h2 {
+        color: #999;
+        margin: 0.2em 0 0;
+        text-transform: uppercase;
+        font-size: 4vw;
+        text-align: center;
+        font-weight: 200;        
+      }
+
+#menu {  
+  text-align: center;
+  /* position: sticky;
+  top: 0;
+  z-index: 1; */
+}
+#menu-heading {
+  color: #000;
+  background-color: rgba(240, 45, 45, 0.03);
+  /* background-color: rgb(126, 18, 18); */
+  padding: 0.5em 0;
+  font-weight: 600;
+}
+#menu-options {
+  background-color: rgba(240, 45, 45, 0.2);
+  padding: 0.1em 0;
+  width: 100%;
+  opacity: 0;
+  max-height: 0;
+  /* pointer-events: none; */
+  transition: max-height .4s, opacity .4s;
+}
+#menu-options ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#menu-options a {
+  text-decoration: none;
+  color: #000;
+}
+
+#menu-options li {
+  padding: 0.3em 0;
+}
+
+.show {
+  max-height: 800px !important;
+  opacity: 1 !important;
+  pointer-events: all !important;
+}
+
+#cards a {
+  color: inherit;
+}
+
+#card-tendencias {
+  background-image: url("/images/tendencias.png");
+}
+#card-beleza {
+  background-image: url("/images/beleza.png");
+}
+#card-dicas {
+  background-image: url("/images/dicas.png");
+}
+
+.card {  
+  background-size: cover;
+  width: 80%;
+  margin: 1em auto 0;   
+  padding-top: 80%;
+  position: relative;
+}
+  .card h3 {
+    background-color: rgba(255, 255, 255, 0.7);
+    font-size: 2em;    
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0.5em;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;    
+    text-align: center;
+  }
+    .card h3 span {
+      font-size: 0.5em;
+      font-weight: 400;
+      margin: 0.1px;
+      padding: 0.1px;
+    }
+
+.title-3 {
+  text-align: center;
+  font-size: 1.3em;
+}
+
+#sobre {
+  background-color: #eee;
+  padding: 1em;
+  margin: 1.26em auto 0;
+}
+  #foto-perfil {
+    display: block;
+    max-width: 80%;
+    margin: 0 auto;
+    border-radius: 50%;
+  }
+
+#clientes {
+  padding: 1em;
+}
+
+/* QUOTES */
+.quote {
+  margin-bottom: 1.5em;
+}
+
+.quote i {
+  font-size: 0.7em;
+  vertical-align: top;
+}
+
+.quote p:last-child {
+  color: #aaa
+}
+/* /////////////////////// */
+
+#servicos {
+  padding: 1em;
+}
+
+#servicos h3 {
+  margin-top: 0;
+}
+
+#servicos h4 {
+  color: rgb(240, 45, 45);
+  font-size: 1.2em;  
+}
+
+#servicos h5 {
+  font-size: 1em;  
+}
+
+footer {
+  background-color: rgb(240, 45, 45);
+  /* background-color: #161719; */
+  color: #FFF;
+  padding: 0.5em;
+  text-align: center;
+  font-weight: 600;
+}    
+
+  footer p:first-child {
+    margin: 0;
+    font-family: 'Abel', sans-serif;
+  }
+
+
+  /* 
+  ********************************************
+  ********************************************
+  ********************************************
+  *************** DESKTOP ********************
+  ********************************************
+  ********************************************
+  ********************************************
+  */
+  @media (min-width: 700px) {
+    #page-heading h1 {
+      font-size: 8vw;
+    }
+    #page-heading h2 {      
+      font-size: 2em;
+    }
+
+    #menu {
+      /* width: 95%; */
+      margin: 0 2em;
+    }
+
+    #menu-heading {
+      display: none;
+    }
+
+    #menu-options {
+      background-color: #FFF;
+      padding: 0.1em 0;
+      opacity: 1;
+      max-height: 100%;
+      border: 2px solid #999;      
+    } 
+      #menu-options ul {
+        display: flex;
+        justify-content: space-evenly;                              
+      }     
+        #menu-options a {
+          text-decoration: none;
+          color: #000;        
+          padding: 1em;
+          cursor: pointer;
+        }
+        #menu-options a:hover {
+          color: rgb(240, 45, 45);
+          text-decoration: underline;
+          cursor: pointer;
+          font-weight: 600;          
+        }
+
+   
+    #cards {
+      display: flex;   
+      justify-content: space-evenly;   
+    }
+      .card {  
+        background-size: cover;
+        width: 30%;
+        margin: 1em 0 0;   
+        padding-top: 30%;
+        position: relative;
+      }
+      .card:hover {  
+        box-shadow: 5px 5px 10px #777;
+        cursor: pointer;
+      }
+
+    #sobre-flex-container {
+      display: flex;
+      align-items: center;
+    }
+
+      #foto-perfil {
+        max-width: 30%;
+        padding-right: 1em;
+      }
+
+      #clientes {
+        clear: both;
+      }
+  }
